@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BookingForm from '../components/BookingForm';
+---
+
+<Layout title="Reservar Cita | GybbenchyDept">
+  <main class="min-h-screen py-16 px-4">
+    <div class="max-w-xl mx-auto">
+      <a href="/" class="inline-flex items-center gap-2 text-gray-500 hover:text-[#C9A227] transition-colors mb-8 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+        </svg>
+        Volver al inicio
+      </a>
+
+      <div class="text-center mb-8">
+        <h1 class="text-3xl md:text-4xl font-bold mb-3">
+          RESERVA TU <span class="text-[#C9A227]">CITA</span>
+        </h1>
+        <p class="text-gray-400 text-sm">
+          Completa el formulario y pulsa el botón para reservar por WhatsApp
+        </p>
+      </div>
+
+      <div class="bg-[#141414] p-6 md:p-8 border border-gray-800">
+        <BookingForm client:load />
+      </div>
+
+      <div class="mt-6 text-center">
+        <p class="text-gray-600 text-xs">
+          ¿Prefieres llamar?
+          <a href="tel:+34618000000" class="text-[#C9A227] ml-1 hover:underline">
+            +34 618 XX XX XX
+          </a>
+        </p>
+      </div>
+    </div>
+  </main>
+</Layout>
