@@ -1,11 +1,210 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="GybbenchyDept | Barbería y Asesoría de Imagen">
+  <main class="min-h-screen">
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=1920&q=80"
+          alt=""
+          class="w-full h-full object-cover opacity-30"
+        />
+        <div class="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] via-transparent to-[#0A0A0A]"></div>
+      </div>
+
+      <div class="relative z-10 text-center px-6 max-w-3xl mx-auto">
+        <p class="text-[#C9A227] text-xs tracking-[0.3em] mb-4 uppercase">Barbería & Asesoría de Imagen</p>
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6">
+          GYBBENCHY<span class="text-[#C9A227]">DEPT</span>
+        </h1>
+        <p class="text-gray-400 text-lg md:text-xl mb-10 max-w-md mx-auto">
+          Tu imagen, nuestra pasión. Transformamos tu estilo en León.
+        </p>
+        <a
+          href="/booking"
+          class="inline-block bg-[#C9A227] text-[#0A0A0A] px-8 py-4 text-sm font-bold tracking-wider hover:bg-[#E5C44D] transition-colors"
+        >
+          RESERVAR CITA
+        </a>
+      </div>
+
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        <svg class="w-5 h-5 text-[#C9A227]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+      </div>
+    </section>
+
+    <section id="servicios" class="py-20 px-4">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">
+          <span class="text-[#C9A227]">//</span> SERVICIOS
+        </h2>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+          <div class="bg-[#141414] p-6 border border-gray-800 hover:border-[#C9A227] transition-colors">
+            <div class="w-10 h-10 mb-4 flex items-center justify-center border border-[#C9A227] text-[#C9A227]">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold mb-1">CORTE</h3>
+            <p class="text-gray-500 text-xs mb-3">Corte personalizado según tu estilo</p>
+            <p class="text-[#C9A227] text-xl font-bold">12€</p>
+          </div>
+
+          <div class="bg-[#141414] p-6 border border-gray-800 hover:border-[#C9A227] transition-colors">
+            <div class="w-10 h-10 mb-4 flex items-center justify-center border border-[#C9A227] text-[#C9A227]">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold mb-1">BARBA</h3>
+            <p class="text-gray-500 text-xs mb-3">Perfilado y asesoramiento</p>
+            <p class="text-[#C9A227] text-xl font-bold">8€</p>
+          </div>
+
+          <div class="bg-[#141414] p-6 border border-gray-800 hover:border-[#C9A227] transition-colors">
+            <div class="w-10 h-10 mb-4 flex items-center justify-center border border-[#C9A227] text-[#C9A227]">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold mb-1">CORTE + BARBA</h3>
+            <p class="text-gray-500 text-xs mb-3">El pack completo</p>
+            <p class="text-[#C9A227] text-xl font-bold">16€</p>
+          </div>
+
+          <div class="bg-[#141414] p-6 border border-gray-800 hover:border-[#C9A227] transition-colors">
+            <div class="w-10 h-10 mb-4 flex items-center justify-center border border-[#C9A227] text-[#C9A227]">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold mb-1">ASESORÍA</h3>
+            <p class="text-gray-500 text-xs mb-3">Imagen personal integral</p>
+            <p class="text-[#C9A227] text-xl font-bold">Consultar</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="horarios" class="py-20 px-4 bg-[#141414]">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">
+          <span class="text-[#C9A227]">//</span> HORARIOS
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="space-y-3">
+            <div class="flex justify-between py-3 border-b border-gray-800">
+              <span class="text-gray-400">Lunes - Viernes</span>
+              <span class="font-bold">10:00 - 14:00 / 16:00 - 20:00</span>
+            </div>
+            <div class="flex justify-between py-3 border-b border-gray-800">
+              <span class="text-gray-400">Sábado</span>
+              <span class="font-bold text-gray-600">Cerrado</span>
+            </div>
+            <div class="flex justify-between py-3 border-b border-gray-800">
+              <span class="text-gray-400">Domingo</span>
+              <span class="font-bold text-gray-600">Cerrado</span>
+            </div>
+          </div>
+
+          <div class="bg-[#0A0A0A] p-6 border border-gray-800">
+            <p class="text-[#C9A227] text-xs tracking-wider mb-2 uppercase">Llámanos</p>
+            <p class="text-xl font-bold mb-3">+34 618 XX XX XX</p>
+            <p class="text-gray-500 text-xs">
+              También puedes reservar directamente por WhatsApp.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ubicacion" class="py-20 px-4">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">
+          <span class="text-[#C9A227]">//</span> DÓNDE ESTAMOS
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="relative aspect-[4/3] overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1529543544277-86527d0c6bd3?w=800&q=80"
+              alt="Interior barbería"
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-[#C9A227] opacity-10 mix-blend-overlay"></div>
+          </div>
+
+          <div class="space-y-6">
+            <div class="flex gap-4">
+              <div class="w-10 h-10 flex items-center justify-center border border-[#C9A227] text-[#C9A227] shrink-0">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-sm mb-1">DIRECCIÓN</h3>
+                <p class="text-gray-400 text-sm">C. Fotógrafo Pepe Gracia, 24005 León</p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="w-10 h-10 flex items-center justify-center border border-[#C9A227] text-[#C9A227] shrink-0">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-sm mb-1">HORARIO</h3>
+                <p class="text-gray-400 text-sm">L-V: 10:00-14:00 / 16:00-20:00</p>
+              </div>
+            </div>
+
+            <a
+              href="https://instagram.com/gybbenchydept"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex gap-4 group"
+            >
+              <div class="w-10 h-10 flex items-center justify-center border border-[#C9A227] text-[#C9A227] group-hover:bg-[#C9A227] group-hover:text-[#0A0A0A] transition-colors shrink-0">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-sm mb-1">INSTAGRAM</h3>
+                <p class="text-gray-400 text-sm">@gybbenchydept</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-10 px-4 border-t border-gray-800">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="text-center md:text-left">
+          <h3 class="text-lg font-bold mb-1">GYBBENCHY<span class="text-[#C9A227]">DEPT</span></h3>
+          <p class="text-gray-500 text-xs">Barbería & Asesoría de Imagen</p>
+        </div>
+
+        <a
+          href="/booking"
+          class="bg-[#C9A227] text-[#0A0A0A] px-6 py-3 text-xs font-bold tracking-wider hover:bg-[#E5C44D] transition-colors"
+        >
+          RESERVAR CITA
+        </a>
+      </div>
+
+      <div class="max-w-6xl mx-auto mt-8 pt-6 border-t border-gray-800 text-center text-gray-600 text-xs">
+        <p>© 2025 GybbenchyDept. León, España.</p>
+      </div>
+    </footer>
+  </main>
 </Layout>
