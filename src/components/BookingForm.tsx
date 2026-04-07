@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 
-const WHATSAPP_NUMBER = "34618000000";
+const WHATSAPP_NUMBER = import.meta.env.PUBLIC_WHATSAPP_NUMBER || "34618000000";
 
 const SERVICIOS = [
   { id: "corte", nombre: "Corte", precio: "12€" },
@@ -28,14 +28,13 @@ export default function BookingForm() {
   const [fecha, setFecha] = useState("");
   const [hora, setHora] = useState("");
   const [nombre, setNombre] = useState("");
-  const [telefono, setTelefono] = useState("");
 
   useEffect(() => {
     setFecha(getMinDate());
     setMounted(true);
   }, []);
 
-  const isValid = mounted && servicio && fecha && hora && nombre.trim() && telefono.trim();
+  const isValid = mounted && servicio && fecha && hora && nombre.trim();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -46,7 +45,7 @@ export default function BookingForm() {
       .toLocaleDateString("es-ES", { day: "numeric", month: "long", year: "numeric" });
 
     const mensaje = encodeURIComponent(
-      `Hola, soy ${nombre.trim()}. Quiero reservar ${servicioText} para el ${fechaFormateada} a las ${hora}. Mi teléfono: ${telefono.trim()}`
+      `Hola, soy ${nombre.trim()}. Quiero reservar ${servicioText} para el ${fechaFormateada} a las ${hora}.`
     );
 
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${mensaje}`, "_blank");
@@ -56,7 +55,6 @@ export default function BookingForm() {
     return (
       <div className="space-y-6">
         <div className="h-24 bg-[#141414] border border-gray-800 animate-pulse"></div>
-        <div className="h-12 bg-[#141414] border border-gray-800 animate-pulse"></div>
         <div className="h-12 bg-[#141414] border border-gray-800 animate-pulse"></div>
         <div className="h-12 bg-[#141414] border border-gray-800 animate-pulse"></div>
         <div className="h-14 bg-[#141414] border border-gray-800 animate-pulse"></div>
@@ -138,20 +136,6 @@ export default function BookingForm() {
         />
       </div>
 
-      <div>
-        <label className="block text-xs text-[#C9A227] tracking-wider mb-2 uppercase">
-          // Teléfono
-        </label>
-        <input
-          type="tel"
-          value={telefono}
-          onChange={(e) => setTelefono(e.target.value)}
-          placeholder="+34 600 000 000"
-          className="w-full bg-[#0A0A0A] border border-gray-700 p-3 focus:border-[#C9A227] focus:outline-none transition-colors text-sm placeholder:text-gray-600"
-          required
-        />
-      </div>
-
       <button
         type="submit"
         disabled={!isValid}
@@ -168,7 +152,7 @@ export default function BookingForm() {
       </button>
 
       <p className="text-center text-gray-600 text-xs">
-        Al reservar, se abrirá WhatsApp con tu mensaje. El barbero confirmará tu cita.
+        Al reservar, se abrirá WhatsApp. El barbero confirmará tu cita.
       </p>
     </form>
   );
