@@ -1,1 +1,37 @@
 @import "tailwindcss";
+
+@theme {
+  --color-gold: #C9A227;
+  --color-gold-light: #E5C44D;
+  --color-gold-dark: #8B7019;
+  --color-bg-dark: #0A0A0A;
+  --color-bg-card: #141414;
+  --color-bg-hover: #1A1A1A;
+  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-mono);
+  background-color: var(--color-bg-dark);
+  color: #E5E5E5;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.2;
+}
